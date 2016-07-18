@@ -2,7 +2,7 @@
 
 **Instructions: ** Define each of the following Git concepts.
 
-* What is version control?  Why is it useful?
+* What is version control?  Why is it useful?*
   Version control is a method of saving your code that allows you to still see your earlier code, be able to revert back to older code, and track and make comments on each updated version
 
 * What is a branch and why would you use one?

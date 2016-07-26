@@ -4,6 +4,12 @@
   border-radius: 7px;
   padding: 0px 0px .5px 5px;
 }
+.job:hover {
+  background-color: yellow;
+}
 .accomplishments {
   font-size: .8em;
+}
+.job > ul{
+  color: red;
 }

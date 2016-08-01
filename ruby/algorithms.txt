@@ -1,0 +1,19 @@
+##How to use an elevator
+- find elevator
+- When elevators are found, scan walls near to elevator doors for the up and down buttons. 
+- press the button corresponding with the direction you want to go (Typically: equilateral triangle for up, upside-down equilateral triangle for down). Wait.
+  - if a light is lit up with your direction and the doors open, get in the elevator
+  - otherwise, continue to wait.
+- When in the elevator, face towards the doors and find a panel with many buttons.
+  - assess the buttons, and find part with numbers
+    - if the number matches the floor you want to go to press press the button with it on it
+    - otherwise continue scanning the numbers
+- Wait quietly as the elevator ascends or descends. When doors open
+  - Is there a screen inside the elevator indicating a number?
+    - If so does that number correspond to the floor you want to go to?
+      - If so, walk out of the elevator. You successfully used an elevator!
+      - Otherwise, let the doors close and continue to wait.
+    - Otherwise, look for other signs with numbers outside of the elevator
+      - If you see a sign with a number that corresponds to the floor you want to go to, walk out of the elevator. You successfully used an elevator!
+      - Otherwise, let the doors close and continue to wait.
+

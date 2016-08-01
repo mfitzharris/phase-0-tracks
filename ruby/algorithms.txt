@@ -17,3 +17,16 @@
       - If you see a sign with a number that corresponds to the floor you want to go to, walk out of the elevator. You successfully used an elevator!
       - Otherwise, let the doors close and continue to wait.
 
+
+##How to wake up by using the alarm on a Samsung phone
+- When going to bed, unlock phone and navigate to "clock" app, then navigate to "alarms" category in app. 
+  - If an alarm is already set (indicated by clock symbol next to listed time appearing blue)
+    - If this is the time you want to wake up at, keep it as is.
+    - Otherwise, if this is not the time you want to wake up at, tap the blue clock so it now appears grey. Continue to next step.
+  - Otherwise, set a new alarm by tapping "add" and filling in the corresponding time and day you want to wake up at.
+- Go to sleep (ZZzzzzzZZZzzzzz)
+- When alarm sounds
+  - If still tired
+    - If you can still sleep and will not be late for work (or school, etc) tap snooze button and get 5 more minutes of sleep
+    - Otherwise, tough nuts, you have to wake up. Grumble about it and get out of bed.
+  - Otherwise, swipe "x" button on screen to silence alarm and get out of bed

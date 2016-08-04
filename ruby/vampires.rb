@@ -40,11 +40,19 @@ while employees > 0
     end
   end
 
+  puts "Do you have any allergies. Type 'done' when finished"
+  allergies = gets.chomp
+  until allergies == "sunshine" || allergies == "done"
+    puts "Do you have any other allergies. Type 'done' when finished"
+    allergies = gets.chomp
+  end
 
   if (age == 2016-year_born|| age == 2015-year_born)&&(wants_garlic_bread||insurance)
     vampire = "Probably not a vampire."
   elsif ((age == 2016-year_born)&&(wants_garlic_bread||insurance))==false
     vampire = "Probably a vampire."
+  elsif allergies == "sunshine"
+    vampire = "Probably a vampire"
   elsif ((age == 2016-year_born)&&(wants_garlic_bread&&insurance))==false
     vampire = "Almost certainly a vampire."
   elsif name == "Drake Cula" || name == "Tu Fang"

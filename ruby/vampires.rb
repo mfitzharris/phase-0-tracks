@@ -3,8 +3,11 @@ name = gets.chomp
 
 puts "How old are you?"
 age = gets.chomp
+age = age.to_i
+
 puts "What year were you born"
 year_born = gets.chomp
+year_born = year_born.to_i
 
 puts "Our company cafeteria serves garlic bread. Should we order some for you? (yes or no)"
 wants_garlic_bread = gets.chomp
@@ -31,3 +34,18 @@ until insurance == true || insurance == false
     insurance = gets.chomp
   end
 end
+
+
+if (age == 2016-year_born)&&(wants_garlic_bread||insurance)
+  vampire = "Probably not a vampire."
+elsif ((age == 2016-year_born)&&(wants_garlic_bread||insurance))==false
+  vampire = "Probably a vampire."
+elsif ((age == 2016-year_born)&&(wants_garlic_bread&&insurance))==false
+  vampire = "Almost certainly a vampire."
+elsif name == "Drake Cula" || name == "Tu Fang"
+  vampire = "Definitely a vampire."
+else 
+  vampire = "Results inconclusive."
+end
+puts vampire
+  

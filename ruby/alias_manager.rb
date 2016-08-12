@@ -65,9 +65,27 @@ def make_alias(name)
   new_alias.map! {|name| name.capitalize!}
   new_alias.insert(1, " ")
   new_alias = new_alias.join
-  p new_alias   
+  p "Your alias is #{new_alias}."   
 end
 
-# make_alias("Molly Fitzharris")
 # make_alias("Felicia Torres")
+
+#USER INTERFACE
+
+puts "Please enter a first and last name"
+input = gets.chomp
+until input.downcase == "quit"
+  make_alias(input)
+  puts "Please enter a first and last name. Type 'quit' when done."
+  input = gets.chomp
+end
+puts "Thank you for using AAAAYE-LIAS MAKER 5000."
+
+
+
+
+
+
+
+
 

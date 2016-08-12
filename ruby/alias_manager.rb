@@ -30,6 +30,7 @@
 
 ##############################################
 
+# create the method
 def make_alias(name)
   name.downcase!
   name_letters = name.split('')
@@ -64,23 +65,30 @@ def make_alias(name)
   new_alias.reverse!
   new_alias.map! {|name| name.capitalize!}
   new_alias.insert(1, " ")
-  new_alias = new_alias.join
-  p "Your alias is #{new_alias}."   
+  new_alias = new_alias.join  
 end
 
 # make_alias("Felicia Torres")
+# make_alias("bcdfg aeiou")
 
 #USER INTERFACE
+
+all_aliases = []
 
 puts "Please enter a first and last name"
 input = gets.chomp
 until input.downcase == "quit"
-  make_alias(input)
+  all_aliases << {true_name: input, their_alias: make_alias(input)}
   puts "Please enter a first and last name. Type 'quit' when done."
   input = gets.chomp
 end
-puts "Thank you for using AAAAYE-LIAS MAKER 5000."
 
+#iterate thru aliases 
+all_aliases.each do |spy|
+  puts "#{spy[:their_alias]}'s real name is #{spy[:true_name]}."
+end
+
+puts "Thank you for using the AAAAYE-LIAS MAKER 5000."
 
 
 

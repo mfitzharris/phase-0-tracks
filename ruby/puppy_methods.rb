@@ -1,3 +1,6 @@
+##### CREATE PUPPY CLASS #############
+##### define puppy methods ###########
+
 class Puppy
 
   def fetch(toy)
@@ -29,6 +32,8 @@ class Puppy
   end
 end
 
+##### CREATE CAT CLASS ##############
+##### define cat methods ############
 
 class Cat
 
@@ -52,7 +57,10 @@ class Cat
 
 end
 
+########################################
 
+
+####Test code for puppy class######### 
 Fido = Puppy.new
 Fido.fetch("ball")
 Fido.speak(5)
@@ -60,12 +68,18 @@ Fido.roll_over
 p Fido.dog_years(3)
 Fido.bark
 
+#initialize empty array to place 
+#created instances of Cat class into
 all_cats = []
 
+#use loop to create 50 instances of Cat class
+#put each instance into the empty array
 50.times do |int|
   all_cats << Cat.new
 end
 
+#use loop (.each method) to run Cat methods on each 
+#instance of Cat class
 all_cats.each do |cat|
   cat.run
   cat.meow(3)

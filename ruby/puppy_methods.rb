@@ -23,6 +23,10 @@ class Puppy
   def bark
     puts "bow wow"
   end
+
+  def initialize
+    puts "Initializing new puppy instance ..."
+  end
 end
 
 

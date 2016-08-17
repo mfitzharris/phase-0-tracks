@@ -53,7 +53,8 @@ number_of_santas = gets.chomp.to_i
 number_of_santas.times do |number|
   all_santas << Santa.new(example_genders.sample, example_ethnicities.sample)
   all_santas[number].age = rand(140)
-  puts "Santa # #{number} is #{all_santas[number].age} year old, #{all_santas[number].ethnicity}, #{all_santas[number].gender} Santa."
+  puts "Santa # #{number} is #{all_santas[number].age} year old, 
+    #{all_santas[number].ethnicity}, #{all_santas[number].gender} Santa."
 end
 
 puts "There are now #{all_santas.length} Santas created"

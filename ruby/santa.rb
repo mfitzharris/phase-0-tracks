@@ -34,28 +34,25 @@ end
 
 
 ##############################
-######## TEST CODE ###########
+######## DRIVER CODE #########
 ##############################
 
-# multiple initializations
+##############################
+#### CREATE MANY SANTAS ######
+##### release 4         ######
+##############################
+
 all_santas = []
 
-# get from santa info from user
-puts "Hello Santa! What is your gender:"
-santa_gender = gets.chomp
-# loop to get multiple santa info
-until santa_gender == "done"
-  puts "What is your ethnicity?"
-  santa_ethnicity = gets.chomp
-  all_santas << Santa.new(santa_gender,santa_ethnicity)
-  puts "Hello Santa! What is your gender? (type 'done' to exit)."
-  santa_gender = gets.chomp
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+150.times do |number|
+  all_santas << Santa.new(example_genders.sample, example_ethnicities.sample)
 end
 
-# test that array worked
-p all_santas
-
-
+p all_santas[2]
+p all_santas[77]
 
 ##### test new setter/getter methods ##### 
 all_santas[0].celebrate_birthday
@@ -72,6 +69,33 @@ p all_santas[0]
 
 
 
+########################################
+###### MULTIPLE INITIALIZATIONS ########
+###### release 1 (part 2)       ########
+########################################
+
+# # multiple initializations
+# all_santas = []
+
+# # get from santa info from user
+# puts "Hello Santa! What is your gender:"
+# santa_gender = gets.chomp
+# # loop to get multiple santa info
+# until santa_gender == "done"
+#   puts "What is your ethnicity?"
+#   santa_ethnicity = gets.chomp
+#   all_santas << Santa.new(santa_gender,santa_ethnicity)
+#   puts "Hello Santa! What is your gender? (type 'done' to exit)."
+#   santa_gender = gets.chomp
+# end
+
+# # test that array worked
+# p all_santas
+
+####################################
+##### SIMPLE INITIALIZATION ########
+##### release 1 (part 1)    ########
+####################################
 
 # Kris_Kringle = Santa.new("Agender", "Polish")
 # Kris_Kringle.speak

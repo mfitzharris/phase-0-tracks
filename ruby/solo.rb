@@ -20,4 +20,12 @@
 # help princess
 #   fairy godmother will save name of inputted princess
 
+class Fairy_Godmother
 
+  def initialize
+    puts "A new Fairy Godmother was born from the dew drops on a daisy"
+  end
+
+end
+
+Maleficent = Fairy_Godmother.new

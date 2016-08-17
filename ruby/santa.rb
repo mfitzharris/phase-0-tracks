@@ -16,7 +16,14 @@ class Santa
   def eat_milk_and_cookies(cookie)
     p "That was a good #{cookie}!"
   end
+ #getter methods
+  def age
+    @age
+  end
 
+  def ethnicity
+    @ethnicity
+    
   #setter methods
   def celebrate_birthday
     @age = @age+1
@@ -31,13 +38,7 @@ class Santa
     @gender = new_gender
   end
 
-  #getter methods
-  def age
-    @age
-  end
-
-  def ethnicity
-    @ethnicity
+ 
   end
 end
 
@@ -66,7 +67,7 @@ p all_santas
 
 
 
-# test new setter/getter methods
+##### test new setter/getter methods ##### 
 all_santas[0].celebrate_birthday
 p all_santas[0].age 
 
@@ -78,6 +79,8 @@ p all_santas[0].ethnicity
 
 all_santas[0].gender = "gender fluid"
 p all_santas[0]
+
+
 
 
 # Kris_Kringle = Santa.new("Agender", "Polish")

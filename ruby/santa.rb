@@ -1,4 +1,4 @@
-#define Santa class with three instance methods
+#define Santa class
 class Santa
 
   def initialize(gender, ethnicity)
@@ -17,22 +17,42 @@ class Santa
     p "That was a good #{cookie}!"
   end
 
+  #setter methods
+  def celebrate_birthday
+    @age = @age+1
+  end
+
+  def get_mad_at(reindeer)
+    @reindeer_ranking.delete(reindeer.capitalize)
+    @reindeer_ranking.insert(-1, reindeer.capitalize)
+  end
+
+  def gender=(new_gender)
+    @gender = new_gender
+  end
+
+  #getter methods
+  def age
+    @age
+  end
+
+  def ethnicity
+    @ethnicity
+  end
 end
 
 
+##############################
+######## TEST CODE ###########
+##############################
 
-#TEST CODE
-# Kris_Kringle = Santa.new("Agender", "Polish")
-# Kris_Kringle.speak
-# Kris_Kringle.eat_milk_and_cookies("short bread cookie")
-
-#multiple initializations
+# multiple initializations
 all_santas = []
 
-#get from santa info from user
+# get from santa info from user
 puts "Hello Santa! What is your gender:"
 santa_gender = gets.chomp
-#loop to get multiple santa info
+# loop to get multiple santa info
 until santa_gender == "done"
   puts "What is your ethnicity?"
   santa_ethnicity = gets.chomp
@@ -41,5 +61,25 @@ until santa_gender == "done"
   santa_gender = gets.chomp
 end
 
-#test that array worked
+# test that array worked
 p all_santas
+
+
+
+# test new setter/getter methods
+all_santas[0].celebrate_birthday
+p all_santas[0].age 
+
+all_santas[0].get_mad_at("Vixen")
+p all_santas[0]
+
+p all_santas[0].ethnicity
+
+
+all_santas[0].gender = "gender fluid"
+p all_santas[0]
+
+
+# Kris_Kringle = Santa.new("Agender", "Polish")
+# Kris_Kringle.speak
+# Kris_Kringle.eat_milk_and_cookies("short bread cookie")

@@ -59,6 +59,7 @@ end
 
 
 #### USER INTERFACE ############
+hair_color_ex = ["Periwinkle", "Sparkly", "Orange", "Strawberry", "Silver", "Star Dust", "Translucent", "Raven"]
 
 all_fairy_godmothers = []
 
@@ -67,8 +68,7 @@ continue = "yes"
 until continue == "no"
   puts "What is the Fairy Godmother's name:"
   name = gets.chomp
-  puts "What color is their hair:"
-  hair_color = gets.chomp
+  hair_color = hair_color_ex.sample
   all_fairy_godmothers << Fairy_Godmother.new(name, hair_color)
   puts "Would you like to create another Fairy Godmother('yes' or 'no')"
   continue = gets.chomp

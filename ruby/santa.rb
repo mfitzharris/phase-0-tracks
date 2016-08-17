@@ -53,8 +53,7 @@ number_of_santas = gets.chomp.to_i
 number_of_santas.times do |number|
   all_santas << Santa.new(example_genders.sample, example_ethnicities.sample)
   all_santas[number].age = rand(140)
-  puts "Santa # #{number} is #{all_santas[number].age} year old, 
-    #{all_santas[number].ethnicity}, #{all_santas[number].gender} Santa."
+  puts "Santa # #{number} is #{all_santas[number].age} year old, #{all_santas[number].ethnicity}, #{all_santas[number].gender} Santa."
 end
 
 puts "There are now #{all_santas.length} Santas created"
@@ -64,17 +63,19 @@ puts "There are now #{all_santas.length} Santas created"
 ##### test new setter/getter methods ##### 
 puts "-------------------------------------"
 p all_santas[0]
+
+puts "This santa is #{all_santas[0].age} years old"
 all_santas[0].celebrate_birthday
-p all_santas[0].age 
+puts "This santa is now #{all_santas[0].age} years old"
 
 all_santas[0].get_mad_at("Vixen")
 p all_santas[0]
 
 p all_santas[0].ethnicity
 
-
+puts "This santa is #{all_santas[0].gender}"
 all_santas[0].gender = "gender fluid"
-p all_santas[0]
+puts "This santa is now #{all_santas[0].gender}"
 
 
 

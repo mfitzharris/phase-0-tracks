@@ -1,11 +1,11 @@
 #define Santa class
 class Santa
 
-  attr_reader :age, :ethnicity
-  attr_accessor :gender
+  attr_reader :ethnicity
+  attr_accessor :gender, :age
 
   def initialize(gender, ethnicity)
-    p "Initializing Santa instance..."
+    puts "Initializing Santa instance..."
     @gender = gender
     @ethnicity = ethnicity
     @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
@@ -13,11 +13,11 @@ class Santa
   end
 
   def speak
-    p "Ho, ho, ho! Haaaappy holidays!"
+    puts "Ho, ho, ho! Haaaappy holidays!"
   end
 
   def eat_milk_and_cookies(cookie)
-    p "That was a good #{cookie}!"
+    puts "That was a good #{cookie}!"
   end
 
   #setter methods
@@ -33,9 +33,9 @@ class Santa
 end
 
 
-##############################
-######## DRIVER CODE #########
-##############################
+##################################################
+################ DRIVER CODE #####################
+##################################################
 
 ##############################
 #### CREATE MANY SANTAS ######
@@ -49,10 +49,13 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 
 150.times do |number|
   all_santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+  all_santas[number].age = rand(140)
+  puts "Santa # #{number} is #{all_santas[number].age} year old, #{all_santas[number].ethnicity}, #{all_santas[number].gender} Santa."
 end
 
-p all_santas[2]
-p all_santas[77]
+p "There are now #{all_santas.length} Santas created"
+
+
 
 ##### test new setter/getter methods ##### 
 all_santas[0].celebrate_birthday

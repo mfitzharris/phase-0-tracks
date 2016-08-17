@@ -59,6 +59,7 @@ end
 
 
 #### USER INTERFACE ############
+
 all_fairy_godmothers = []
 
 continue = "yes"
@@ -66,7 +67,7 @@ continue = "yes"
 until continue == "no"
   puts "What is the Fairy Godmother's name:"
   name = gets.chomp
-  puts "What color is their hair color:"
+  puts "What color is their hair:"
   hair_color = gets.chomp
   all_fairy_godmothers << Fairy_Godmother.new(name, hair_color)
   puts "Would you like to create another Fairy Godmother('yes' or 'no')"
@@ -80,6 +81,7 @@ all_fairy_godmothers.length.times do |i|
   puts "  Current Age: #{all_fairy_godmothers[i].age}"
   puts "  Is good?: #{all_fairy_godmothers[i].is_good}"
 end
+
 
 
 ##### TEST CODE ###########

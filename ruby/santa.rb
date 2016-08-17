@@ -47,17 +47,22 @@ all_santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
-150.times do |number|
+puts "How many santas do you want to create:"
+number_of_santas = gets.chomp.to_i
+
+number_of_santas.times do |number|
   all_santas << Santa.new(example_genders.sample, example_ethnicities.sample)
   all_santas[number].age = rand(140)
   puts "Santa # #{number} is #{all_santas[number].age} year old, #{all_santas[number].ethnicity}, #{all_santas[number].gender} Santa."
 end
 
-p "There are now #{all_santas.length} Santas created"
+puts "There are now #{all_santas.length} Santas created"
 
 
 
 ##### test new setter/getter methods ##### 
+puts "-------------------------------------"
+p all_santas[0]
 all_santas[0].celebrate_birthday
 p all_santas[0].age 
 

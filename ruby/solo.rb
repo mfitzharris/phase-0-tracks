@@ -58,13 +58,36 @@ class Fairy_Godmother
 end
 
 
+#### USER INTERFACE ############
+all_fairy_godmothers = []
+
+continue = "yes"
+
+until continue == "no"
+  puts "What is the Fairy Godmother's name:"
+  name = gets.chomp
+  puts "What color is their hair color:"
+  hair_color = gets.chomp
+  all_fairy_godmothers << Fairy_Godmother.new(name, hair_color)
+  puts "Would you like to create another Fairy Godmother('yes' or 'no')"
+  continue = gets.chomp
+end
+
+all_fairy_godmothers.length.times do |i|
+  puts "Fairy # #{i+1}:"
+  puts "  Name: #{all_fairy_godmothers[i].name}"
+  puts "  Current Hair Color: #{all_fairy_godmothers[i].hair_color}"
+  puts "  Current Age: #{all_fairy_godmothers[i].age}"
+  puts "  Is good?: #{all_fairy_godmothers[i].is_good}"
+end
+
 
 ##### TEST CODE ###########
 
-Maleficent = Fairy_Godmother.new("Maleficent", "blue")
-p Maleficent
-Maleficent.name = "Dragon Maleficent"
-p Maleficent.name
-Maleficent.become_evil
-Maleficent.help_princess("Aurora")
+# Maleficent = Fairy_Godmother.new("Maleficent", "blue")
+# p Maleficent
+# Maleficent.name = "Dragon Maleficent"
+# p Maleficent.name
+# Maleficent.become_evil
+# Maleficent.help_princess("Aurora")
 

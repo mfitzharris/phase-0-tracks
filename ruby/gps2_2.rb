@@ -27,3 +27,14 @@
 # input: the list
 # steps: iterate over list 
 # output: item= quantity
+
+def create_list(input)
+  items = {}
+  input.split(' ').each do |item|
+    items[item] = 0
+  end
+  p items
+  # print_list(items)
+end
+
+groceries = create_list("banana apple orange")

@@ -79,3 +79,16 @@ delete_item(groceries, "lemonade")
 update_quant(groceries, "Ice Cream", 1)
 
 print_list(groceries)
+
+
+
+
+### REFLECTION ###
+
+# Learned the proper way to pseudocode and how beneficial it can be
+# An array is maybe easier to work with, but the structure of a hash makes more sense here
+# a method returns ...
+# You can pass pretty much anything into a method as an argument
+# by defining the returned information from a method to a variable
+# How to pseudocode and why to pseudocode. Still a bit fuzzy on what exactly a method returns...
+

@@ -33,8 +33,7 @@ def create_list(input)
   input.split(' ').each do |item|
     items[item] = 0
   end
-  p items
-  # print_list(items)
+  print_list(items)
 end
 
 def add_to_list(list, new_item, quantity = 0)
@@ -49,6 +48,11 @@ def update_quant(list, item, new_quant)
   list.merge!(item => new_quant)
 end
 
+def print_list(list)
+  list.each do |item, quantity|
+    puts "#{item}: #{quantity}"
+  end
+end
 # TEST CODE 
 groceries = create_list("banana apple orange")
 
@@ -60,3 +64,4 @@ p groceries
 
 update_quant(groceries, "apple", 2)
 p groceries
+

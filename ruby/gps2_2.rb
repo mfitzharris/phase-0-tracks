@@ -37,4 +37,14 @@ def create_list(input)
   # print_list(items)
 end
 
+def add_to_list(list, new_item, quantity = 0)
+  list[new_item] = quantity
+end
+
+
+
+# TEST CODE 
 groceries = create_list("banana apple orange")
+
+add_to_list(groceries, "milk", 1)
+p groceries

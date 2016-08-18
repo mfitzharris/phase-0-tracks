@@ -41,6 +41,10 @@ def add_to_list(list, new_item, quantity = 0)
   list[new_item] = quantity
 end
 
+def delete_item(list, item)
+  list.delete(item)
+end
+
 def update_quant(list, item, new_quant)
   list.merge!(item => new_quant)
 end
@@ -49,6 +53,9 @@ end
 groceries = create_list("banana apple orange")
 
 add_to_list(groceries, "milk", 1)
+p groceries
+
+delete_item(groceries, "banana")
 p groceries
 
 update_quant(groceries, "apple", 2)

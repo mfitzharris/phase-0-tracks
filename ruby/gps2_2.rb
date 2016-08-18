@@ -65,3 +65,17 @@ p groceries
 update_quant(groceries, "apple", 2)
 p groceries
 
+
+# Release 3 Test Code
+shopping = create_list("milk tums cheese")
+
+add_to_list(shopping, "lemonade", 2)
+add_to_list(shopping, "Tomatoes", 3)
+add_to_list(shopping, "Onions", 1)
+add_to_list(shopping, "Ice Cream", 4)
+
+delete_item(groceries, "lemonade")
+
+update_quant(groceries, "Ice Cream", 1)
+
+print_list(groceries)

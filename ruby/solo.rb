@@ -74,7 +74,9 @@ until continue == "no"
   continue = gets.chomp
 end
 
-all_fairy_godmothers.length.times do |i|
+#print out information about the fairy godmother
+#use times to allow a non-zero indexed number to be printed (line 80)
+all_fairy_godmothers.length.times do |i| 
   puts "Fairy # #{i+1}:"
   puts "  Name: #{all_fairy_godmothers[i].name}"
   puts "  Current Hair Color: #{all_fairy_godmothers[i].hair_color}"

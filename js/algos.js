@@ -1,7 +1,4 @@
-// objective- write a function that takes an array
-//          of words/phrases and returns the longest
-//          word/phrase in the array
-// input- string (word or phrase)
+// input- array of strings (word or phrase)
 // function- for each item in the array get length starting w index -1
 //         - if length of item is longer than previously
 //            indexed item then
@@ -9,6 +6,10 @@
 // output- returns longest item
 // ex- array=["long phrase", "longer phrase", "longest phrase"]
 //     returns "longest phrase"
+//-------
+// input- 2 objects
+// function- compare to see if objects share at least 1 key value pair
+// output- true or false
 
 function longest(strArray) {
   var longestItem; 
@@ -21,7 +22,31 @@ function longest(strArray) {
   } return longestItem;
 }
 
+function comparePairs(object1, object2){
+  for(var key in object1) {
+    if (key+object1[key]==key+object2[key]) {
+      return true;
+    }
+    else 
+      return false;
+  }
+}
 
-// driver code
+
+
+// driver code //
 console.log(longest(["123", "1234", "12345"]));
 console.log(longest(["blah", "blahblah", "haha", "hohohohohohoho"]))
+
+objectA = {key:"value1", key2:"value2", key3:"value3"};
+objectB = {key:"value1", key2:"value2", key3:"value3"};
+objectC = {key:"value2", key2:"value3", key3:"value4"};
+objectD = {key:"value1", key2:"value3", key3:"value5"}; 
+
+console.log(comparePairs(objectA, objectB)); //should return true
+console.log(comparePairs(objectA, objectC)); //should return false
+console.log(comparePairs(objectA, objectD)); //should return true
+
+
+
+

@@ -10,6 +10,10 @@
 // input- 2 objects
 // function- compare to see if objects share at least 1 key value pair
 // output- true or false
+//-------
+// input- integer (for length)
+// function- generate array with length of input of randomized words(length of word randomized)
+// output- array 
 
 function longest(strArray) {
   var longestItem; 
@@ -32,6 +36,20 @@ function comparePairs(object1, object2){
   }
 }
 
+function randomArray(int) {
+  var arr = [];
+  alphabet = ['a','b','c','d','e','f','g', 'h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']; 
+  for (var i=0; i<int; i++) {
+    string = '';
+    strLength = Math.floor(Math.random() * 10) + 1;
+  
+    for (var j=0; j<=strLength; j++) {
+      string += alphabet[Math.floor(Math.random() * 26)];
+    }
+    arr.push(string);
+  } 
+  return arr
+}
 
 
 // driver code //
@@ -43,9 +61,13 @@ objectB = {key:"value1", key2:"value2", key3:"value3"};
 objectC = {key:"value2", key2:"value3", key3:"value4"};
 objectD = {key:"value1", key2:"value3", key3:"value5"}; 
 
-console.log(comparePairs(objectA, objectB)); //should return true
-console.log(comparePairs(objectA, objectC)); //should return false
-console.log(comparePairs(objectA, objectD)); //should return true
+console.log(comparePairs(objectA, objectB)); //should return true (identical)
+console.log(comparePairs(objectA, objectC)); //should return false 
+console.log(comparePairs(objectA, objectD)); //should return true (first k/v pair is same)
+
+console.log(randomArray(4));
+console.log(randomArray(2));
+console.log(randomArray(6));
 
 
 

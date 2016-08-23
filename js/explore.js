@@ -23,4 +23,7 @@ function reverse (string) {
 }
 
 //driver code
-console.log(reverse("hello"))
+reversedString = reverse("hello")
+if (1==1) {
+  console.log(reversedString)
+}

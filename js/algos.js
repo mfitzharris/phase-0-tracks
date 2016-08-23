@@ -65,9 +65,15 @@ console.log(comparePairs(objectA, objectB)); //should return true (identical)
 console.log(comparePairs(objectA, objectC)); //should return false 
 console.log(comparePairs(objectA, objectD)); //should return true (first k/v pair is same)
 
-console.log(randomArray(4));
-console.log(randomArray(2));
-console.log(randomArray(6));
+for (var i = 0; i < 11; i++) {
+  newArray = randomArray(Math.floor(Math.random() * 5)+1);
+  console.log(newArray);
+  console.log("the longest is: " + longest(newArray));
+}
+
+// console.log(randomArray(4));
+// console.log(randomArray(2));
+// console.log(randomArray(6));
 
 
 

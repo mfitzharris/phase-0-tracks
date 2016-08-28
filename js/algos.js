@@ -78,7 +78,7 @@ console.log(comparePairs(objectA, objectD)); //should return true (first k/v pai
 // generate 10 random arrays (using randomArray method- with argument for length randomize)
 // find the longest string in each array
 for (var i = 0; i < 11; i++) {
-  newArray = randomArray(Math.floor(Math.random() * 5)+1);
+  newArray = randomArray(Math.floor(Math.random() * 5)+2);
   console.log(newArray);
   console.log("the longest is: " + longest(newArray));
 }

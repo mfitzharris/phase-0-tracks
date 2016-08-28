@@ -1,8 +1,9 @@
-// input- array of strings (word or phrase)
-// function- for each item in the array get length starting w index -1
-//         - if length of item is longer than previously
-//            indexed item then
-//            continue 
+// input- array of strings (words or phrases)
+// function- 
+//         - set longest length variable to zero
+//         - iterate over each item in the array + get length starting w index 0
+//         - if item's length is longer than longestLength 
+//            set item to longestItem & its length to longestLength
 // output- returns longest item
 // ex- array=["long phrase", "longer phrase", "longest phrase"]
 //     returns "longest phrase"
@@ -11,12 +12,20 @@
 // function- compare to see if objects share at least 1 key value pair
 // output- true or false
 //-------
-// input- integer (for length)
-// function- generate array with length of input of randomized words(length of word randomized)
+// input- integer (for length of generate array)
+// function- 
+//      set variables for array of the alphabet, and an empty array
+//      run loop # of times as inputed integer
+//        set empty string
+//        use math to generate random length for generated string
+//        for that length use math to find a random index of alphabet array
+//          and add that to the empty string
+//        add the completed string to the empty array
+//      return the array      
 // output- array 
+// ------
 
 function longest(strArray) {
-  var longestItem; 
   var longestLength = 0;
   for (var i=0; i<strArray.length; i++) {
     if(strArray[i].length > longestLength) {
@@ -36,6 +45,7 @@ function comparePairs(object1, object2){
   }
 }
 
+// create random array with defined length with random words of a random length
 function randomArray(int) {
   var arr = [];
   alphabet = ['a','b','c','d','e','f','g', 'h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']; 
@@ -65,12 +75,15 @@ console.log(comparePairs(objectA, objectB)); //should return true (identical)
 console.log(comparePairs(objectA, objectC)); //should return false 
 console.log(comparePairs(objectA, objectD)); //should return true (first k/v pair is same)
 
+// generate 10 random arrays (using randomArray method- with argument for length randomize)
+// find the longest string in each array
 for (var i = 0; i < 11; i++) {
-  newArray = randomArray(Math.floor(Math.random() * 5)+1);
+  newArray = randomArray(Math.floor(Math.random() * 5)+2);
   console.log(newArray);
   console.log("the longest is: " + longest(newArray));
 }
 
+ 
 // console.log(randomArray(4));
 // console.log(randomArray(2));
 // console.log(randomArray(6));

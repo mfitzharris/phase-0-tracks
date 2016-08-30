@@ -1,0 +1,86 @@
+1) display the information in one table
+    QUERY--> sqlite> SELECT * FROM closet;
+    OUTPUT-->
+    1|black cardigan|true|2
+    2|polka dot shirt|true|5
+    3|pink ballet flats|true|1
+    4|grey sweat pants|true|3
+    5|b&w striped dress|true|6
+    6|black skirt|true|4
+    7|khakis|false|3
+    8|blue floral dress|false|6
+    9|grey tshirt|true|5
+    10|pink pullover|true|2
+
+2) update an item that meets some condition (you can choose a condition that makes sense)
+    QUERY--> UPDATE closet SET liked="false" WHERE category=3;
+    OUTPUT--> none
+
+3) Display the information in both tables using one query
+    QUERY --> SELECT * FROM closet, categories WHERE closet.category = categories.id;
+    OUTPUT -->
+    1|black cardigan|true|2|2|sweaters
+    2|polka dot shirt|true|5|5|tops
+    3|pink ballet flats|true|1|1|shoes
+    4|grey sweat pants|false|3|3|pants
+    5|b&w striped dress|true|6|6|dresses
+    6|black skirt|true|4|4|skirts
+    7|khakis|false|3|3|pants
+    8|blue floral dress|false|6|6|dresses
+    9|grey tshirt|true|5|5|tops
+    10|pink pullover|true|2|2|sweaters
+
+4) Display a narraower selection of columns (few columns than all of them, in other words) from both tables using one query
+    QUERY --> SELECT closet.item, categories.category FROM closet JOIN categories ON closet.category = categories.id;
+    OUTPUT --> 
+    black cardigan|sweaters
+    polka dot shirt|tops
+    pink ballet flats|shoes
+    grey sweat pants|pants
+    b&w striped dress|dresses
+    black skirt|skirts
+    khakis|pants
+    blue floral dress|dresses
+    grey tshirt|tops
+    pink pullover|sweaters
+
+5) Delete an item that meets some condition (you can choose a condition that makes sense)
+    QUERY --> DELETE FROM closet WHERE liked="false";
+    OUTPUT (via SELECT * FROM closet;)-->
+    1|black cardigan|true|2
+    2|polka dot shirt|true|5
+    3|pink ballet flats|true|1
+    5|b&w striped dress|true|6
+    6|black skirt|true|4
+    9|grey tshirt|true|5
+    10|pink pullover|true|2
+
+3.2) Try a few different joins in your database, and record the commands and output
+    QUERY--> SELECT closet.id, closet.item, closet.liked, categories.category
+    ...> FROM categories
+    ...> INNER JOIN closet
+    ...> ON closet.category=categories.id;
+    OUTPUT -->
+    1|black cardigan|true|sweaters
+    2|polka dot shirt|true|tops
+    3|pink ballet flats|true|shoes
+    5|b&w striped dress|true|dresses
+    6|black skirt|true|skirts
+    9|grey tshirt|true|tops
+    0|pink pullover|true|sweaters
+
+    QUERY--> SELECT closet.id, closet.item, categories.category FROM categories LEFT JOIN closet ON closet.category=categories.id;
+    OUTPUT-->
+    3|pink ballet flats|shoes
+    1|black cardigan|sweaters
+    10|pink pullover|sweaters
+    ||pants
+    6|black skirt|skirts
+    9|grey tshirt|tops
+    2|polka dot shirt|tops
+    5|b&w striped dress|dresses
+
+    QUERY--> SELECT closet.id, closet.item, categories.category FROM categories LEFT JOIN closet ON closet.category=categories.id WHERE categories.id=2;
+    OUTPUT--> 
+    1|black cardigan|sweaters
+    10|pink pullover|sweaters

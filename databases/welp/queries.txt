@@ -1,0 +1,30 @@
+Directions: Join three tables:
+
+Command:  SELECT * FROM users JOIN reviews1 on users.id = reviews1.users_id JOIN businesses on businesses.id = reviews1.businesses_id;
+
+Output:
+id|first_name|last_name|id|stars|comment|businesses_id|users_id|id|name
+1|Bradford|Pitt|1|4|Good Jambalaya|6|1|6|Sushi World
+7|Denzel|George|2|2|Bride ran off|1|7|1|Grundy Hollow Wedding Chapel
+6|Merryl|Streepman|3|1|Wrecked Car|2|6|2|Amir's Towing
+4|Steven|Wonder|4|4|Fun Yoga|4|4|4|Lotus Yoga
+
+
+Direction: Join three tables only using certain columns.
+
+Command:  
+SELECT users.last_name, reviews1.stars, reviews1.comment, businesses.name FROM users JOIN reviews1 on users.id = reviews1.users_id JOIN businesses on businesses.id = reviews1.businesses_id;
+
+Output:
+last_name|stars|comment|name
+Pitt|4|Good Jambalaya|Sushi World
+George|2|Bride ran off|Grundy Hollow Wedding Chapel
+Streepman|1|Wrecked Car|Amir's Towing
+Wonder|4|Fun Yoga|Lotus Yoga
+
+
+Direction: View data from all three tables, for only one business name.
+
+Command:  SELECT * FROM users JOIN reviews1 on users.id = reviews1.users_id JOIN businesses on businesses.id = reviews1.businesses_id  WHERE businesses.name = "Sushi World";
+
+Output: 1|Bradford|Pitt|1|4|Good Jambalaya|6|1|6|Sushi World

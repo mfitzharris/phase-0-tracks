@@ -1,4 +1,4 @@
-1. common HTTP status codes
+1. **common HTTP status codes**
   * **200 = OK =** everything could be processed with no problems, code to aim for! 
   * **300 = Multiple Choices =** requested resource has different choices that cannot be resolved into 1
   * **301 = Moved Permanently =** requested resource has been assigned a new permanent URI, future refs to the resource should use one of the returned URIs
@@ -15,7 +15,7 @@
   * **503 = Service Unavailable =** server unable to handle HTTP request at the time. 
   * **550 = Permission Denied =** account currently logged into doesnt have permission to perform request
 
-2. difference between a GET request and a POST request. When each might be used
+2. **difference between a GET request and a POST request. When each might be used**
   * **GET request** used for retrieving(requesting) data via a specified resource/path (html, css, images, etc), 
     * query string is sent in the url 
     * can be cached
@@ -28,7 +28,7 @@
     * no restrictions on data length/type
     * data resubmitted on reload/back buttons
 
-3. What is a cookie? How does it relate to HTTP requests?
+3. **What is a cookie? How does it relate to HTTP requests?**
   * sent as a header with every HTTP request, small piece of data sent from a site and stored in a user's browser while user is browsing
   * often used to be able to tell if requests are coming from the same user --> 
     * can keep a user logged in

@@ -5,8 +5,8 @@
   * take note of those
 2. 50 minutes = Research those topics! (actual --> went over)
 3. ?? minutes = See if I can find a jQuery livecode
-  * code along with it (if found)
-4. remainder = Test things out!
+  * code along with it (if found) (actual --> not found under 1hr, if time later in the week will watch)
+4. remainder = Test things out! (actual --> spent too much time on #2, will come back to this later in the week! )
 
 ##Research
 #### How to include jQuery in HTML file (syntax)/basic use guide

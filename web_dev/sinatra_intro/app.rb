@@ -54,5 +54,43 @@ get '/students/:id' do
   response
 end
 
+# write a GET route that displays an address (make it up)
+get '/contact' do
+  "123 S Main Street <br> Anywhere Town, IL 60000 <br> USA"
+end
+
+
+# write a GET route with query parameters 
+# for a name, 
+# localhose:9393/great_job?name=blah
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
+# a route that uses route parameters
+# to add two numbers and respond with the result
+get '/:num1/addto/:num2' do
+  num1 = params[:num1].to_i
+  num2 = params[:num2].to_i
+  num3 = num1 + num2
+  "#{num1} + #{num2} = #{num3}"
+end
+
+# write a route that allows user to search database in some way
+get '/students/campus/:campus' do
+  campus = db.execute("SELECT * FROM students WHERE campus=?", [params[:campus]])
+  response = "#{params[:campus]} CAMPUS:<br><br>"
+  campus.each do |student|
+    response << " ID: #{student['id']}<br>"
+    response << " Name: #{student['name']}<br>"
+    response << " Age: #{student['age']}<br><br>"
+  end
+  response
+end
 
 

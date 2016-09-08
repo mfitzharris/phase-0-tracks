@@ -1,0 +1,17 @@
+body {
+  width: 650px;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+img {
+  width: 210px;
+  display: inline-block;
+}
+
+p {
+  font-weight: 200;
+}
+
+h1, h2 {
+  border-bottom: 5px solid black;
+}

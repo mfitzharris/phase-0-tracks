@@ -6,7 +6,7 @@
 2. 50 minutes = Research those topics! (actual --> went over)
 3. ?? minutes = See if I can find a jQuery livecode
   * code along with it (if found) (actual --> not found under 1hr, if time later in the week will watch)
-4. remainder = Test things out! (actual --> spent too much time on #2, will come back to this later in the week! )
+4. remainder/release2 = Test things out! (actual --> spent too much time on #2, will come back to this later in the week! --> came back, got it to work!)
 
 ##Research
 #### How to include jQuery in HTML file (syntax)/basic use guide
@@ -42,6 +42,7 @@
  * [eduonix - top 10 jQuery Functions Which You Must Know As a Developer](https://www.eduonix.com/blog/web-programming-tutorials/top-10-jquery-functions-which-you-must-know-as-a-developer/)more effect based
  * [tuts plus - 20 helpful jquery methods you should be using](http://code.tutsplus.com/tutorials/20-helpful-jquery-methods-you-should-be-using--net-10521)
  * p 304 & 305 in jon duckett book
+ * [Mkyong - jquery effects examples](http://www.mkyong.com/tag/jquery-effects/)
 * content filters
  * get/change content
     * `.html()` gets or sets an inner HTML of an element
@@ -77,6 +78,7 @@
 * effects and animation
  * basic
     * `.hide()` hides the selected element
+      * [Mkyong - example of hide function](http://www.mkyong.com/jquery/jquery-show-and-hide-example/) 
     * `.show()` opposite of hide, shows element (hide function must be used before it)
     * `.toggle()` --> not quite understanding this **LOOK UP MORE LATER** toggles show/hide
  * slide functions

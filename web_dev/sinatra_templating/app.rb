@@ -31,4 +31,9 @@ post '/students' do
   redirect '/'
 end
 
+get '/profile' do
+  id = params[:id].to_i
+  @student = db.execute("SELECT * FROM students WHERE id=?", id)
+  erb :profile
+end
 # add static resources

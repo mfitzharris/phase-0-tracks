@@ -11,7 +11,8 @@ db.results_as_hash = true
 # show students on the home page
 # @ in front of var makes variable available in template
 # then in template use -->  <% ruby code %> 
-# <% =@variable %> will print the return of the variable
+# <%= @variable %> will print the output of an expression
+# <% blahblahblah will let the ruby run in the background
 get '/' do
   @students = db.execute("SELECT * FROM students")
   erb :home
@@ -30,4 +31,19 @@ post '/students' do
   redirect '/'
 end
 
+get '/profile' do
+  id = params[:id].to_i
+  @student = db.execute("SELECT * FROM students WHERE id=?", id)
+  erb :profile
+end
+
+get '/campuses' do
+  @campuses = db.execute("SELECT * FROM campuses")
+  erb :new_campus
+end
+
+post '/campuses' do
+  db.execute("INSERT INTO campuses (name) VALUES (?)", [params['location']])
+  redirect '/campuses'
+end
 # add static resources

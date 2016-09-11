@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create New Campus</title>
+</head>
+<body>
+  <h1>Campus Management System</h1>
+  <p>Welcome to the campus management system.</p>
+  <form action="/campuses" method="POST">
+    <input type="text" name="location" placeholder="New Campus">
+    <button type="submit">Save</button>
+  </form>
+  <ul>
+    <% @campuses.each do |campus| %>
+      <li><%= campus['name'] %> </li>
+    <% end %>
+  </ul>
+</body>
+</html>

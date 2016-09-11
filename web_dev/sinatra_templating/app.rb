@@ -36,4 +36,14 @@ get '/profile' do
   @student = db.execute("SELECT * FROM students WHERE id=?", id)
   erb :profile
 end
+
+get '/campuses' do
+  @campuses = db.execute("SELECT * FROM campuses")
+  erb :new_campus
+end
+
+post '/campuses' do
+  db.execute("INSERT INTO campuses (name) VALUES (?)", [params['location']])
+  redirect '/campuses'
+end
 # add static resources

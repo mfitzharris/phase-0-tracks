@@ -18,6 +18,11 @@
 </body>
 ```
 
+or 
+```html
+<script src= "jquery.min.js"></script>
+```
+
 #### common jQuery Selectors --> **finish recording these later!!!**
 * cheatsheets --> 
  * [jQuery Quick API Reference](https://oscarotero.com/jquery/)
